@@ -82,7 +82,7 @@ app.get('/weather',(req,res)=>{
       res.send({
             address:req.query.address,
             location:location,
-            forcast:response.daily.summary
+            forcast:response.daily.summary+ ', and the possibility to rain is '+response.currently.precipProbability
       })
 
     })
